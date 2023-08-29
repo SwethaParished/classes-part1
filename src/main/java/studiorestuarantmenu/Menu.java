@@ -1,6 +1,6 @@
-package studio;
+package studiorestuarantmenu;
 
-public class RestuarantMenu {
+public class Menu {
 
     public static void main(String[] args) {
 
