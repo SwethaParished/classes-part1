@@ -1,9 +1,9 @@
-package studiorestuarantmenu;
-import java.awt.*;
+package restuarantmenu;
+
 import java.util.Date;
-import java.util.Objects;
 
 public class MenuItems {
+
     private double price;
     private String name;
     private String description;
@@ -12,9 +12,9 @@ public class MenuItems {
     private Date dateCreated;
 
     public MenuItems(double price,
-                    String name,
-                    String description,
-                    String category) {
+                     String name,
+                     String description,
+                     String category) {
         this.price = price;
         this.name = name;
         this.description = description;
@@ -63,19 +63,4 @@ public class MenuItems {
         return dateCreated;
     }
 
-    @Override
-    public String toString() {
-        return name + "\n" + description + "\n$" + price;
-    }
-
-    @Override
-    public boolean equals(Object otherItem) {
-        if (this == otherItem)
-            return true;
-        if (otherItem == null || getClass() != otherItem.getClass())
-            return false;
-        MenuItems menuItems = (MenuItems) otherItem;
-        return Objects.equals(name, menuItems.name) &&
-                Objects.equals(category, menuItems.category);
-    }
 }
